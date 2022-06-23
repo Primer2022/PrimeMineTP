@@ -4,8 +4,6 @@ import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.inventory.Inventory;
 
-import java.util.Collections;
-
 public class GuiManager {
     public static Inventory mine = Bukkit.createInventory(null, 45,"§8Шахты");
     static {
