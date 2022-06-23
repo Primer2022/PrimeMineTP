@@ -11,13 +11,13 @@ import org.bukkit.event.inventory.InventoryDragEvent;
 
 public class GuiListener implements Listener {
 
-    @EventHandler(priority = EventPriority.LOWEST)
+    @EventHandler
     public void onDrag(InventoryDragEvent e) {
         if (e.getView().getTitle() == "§8Шахты") {
                 e.setCancelled(true);
         }
     }
-    @EventHandler(priority = EventPriority.LOWEST)
+    @EventHandler
     public void onClick(InventoryClickEvent e) {
         if (e.getView().getTitle() == "§8Шахты") {
             if (e.getCurrentItem() == null) {
