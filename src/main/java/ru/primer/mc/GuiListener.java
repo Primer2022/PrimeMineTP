@@ -13,13 +13,13 @@ public class GuiListener implements Listener {
 
     @EventHandler
     public void onDrag(InventoryDragEvent e) {
-        if (e.getView().getTitle() == "§8Шахты") {
+        if (e.getInventory().equals(GuiManager.mine)) {
                 e.setCancelled(true);
         }
     }
     @EventHandler
     public void onClick(InventoryClickEvent e) {
-        if (e.getView().getTitle() == "§8Шахты") {
+        if (e.getInventory().equals(GuiManager.mine)) {
             if (e.getCurrentItem() == null) {
                 e.setCancelled(true);
                 return;
