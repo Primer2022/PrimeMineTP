@@ -15,13 +15,23 @@ import static ru.primer.mc.GuiManager.mine;
 
 public class Constructors {
     public void GuiItems(String displayName, List lore, Material material, int index, int amount) {
-        ItemStack item = new ItemStack(material);
-        ItemMeta itemMeta = item.getItemMeta();
-        itemMeta.setDisplayName(displayName);
-        itemMeta.setLore(lore);
-        item.setItemMeta(itemMeta);
-        item.setAmount(amount);
-        mine.setItem(index, new ItemStack(item));
+        if(lore != null) {
+            ItemStack item = new ItemStack(material);
+            ItemMeta itemMeta = item.getItemMeta();
+            itemMeta.setDisplayName(displayName);
+            itemMeta.setLore(lore);
+            item.setItemMeta(itemMeta);
+            item.setAmount(amount);
+            mine.setItem(index, new ItemStack(item));
+        }
+        else {
+            ItemStack item = new ItemStack(material);
+            ItemMeta itemMeta = item.getItemMeta();
+            itemMeta.setDisplayName(displayName);
+            item.setItemMeta(itemMeta);
+            item.setAmount(amount);
+            mine.setItem(index, new ItemStack(item));
+        }
     }
     public void mine(World world, double x, double y, double z, float yaw, float pitch, int shaftNumber, int index, Material material, Material eventMaterial, int eventIndex, Player p, String worldstr) {
         if (eventMaterial == material) {
@@ -43,7 +53,7 @@ public class Constructors {
     }
     public void items(String displayName, int index, int amount, Material material) {
         List<String> lore_1 = new ArrayList<>();
-        lore_1.add(ChatColor.translateAlternateColorCodes('&', "&f"));
+        lore_1.add(ChatColor.translateAlternateColorCodes('&', ""));
         lore_1.add(ChatColor.translateAlternateColorCodes('&', "&bНажмите, чтобы телепортироваться."));
 
         Main.getConstructors().GuiItems(displayName, lore_1, material, index, amount);
