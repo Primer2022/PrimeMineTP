@@ -25,7 +25,6 @@ public class GuiManager {
         Main.getConstructors().GuiItems(" ", Collections.singletonList(""), Material.CYAN_STAINED_GLASS_PANE, 7 , 1);
         Main.getConstructors().GuiItems(" ", Collections.singletonList(""), Material.CYAN_STAINED_GLASS_PANE, 8 , 1);
         Main.getConstructors().GuiItems(" ", Collections.singletonList(""), Material.CYAN_STAINED_GLASS_PANE, 9 , 1);
-        Main.getConstructors().GuiItems(" ", Collections.singletonList(""), Material.CYAN_STAINED_GLASS_PANE, 10 , 1);
         Main.getConstructors().GuiItems(" ", Collections.singletonList(""), Material.CYAN_STAINED_GLASS_PANE, 17 , 1);
         Main.getConstructors().GuiItems(" ", Collections.singletonList(""), Material.CYAN_STAINED_GLASS_PANE, 18 , 1);
         Main.getConstructors().GuiItems(" ", Collections.singletonList(""), Material.CYAN_STAINED_GLASS_PANE, 26 , 1);
